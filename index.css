@@ -1,0 +1,99 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding-inline: 15px;
+    
+}
+
+
+
+.wrapper{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin-inline: auto;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.07), 0 4px 8px rgba(0,0,0,0.07), 0 8px 16px rgba(0,0,0,0.07), 0 16px 32px rgba(0,0,0,0.07), 0 32px 64px rgba(0,0,0,0.07);
+
+
+}
+
+.input-num{
+    max-width: 50%;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+input{
+    padding: 2px;
+    background: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+input:focus{  
+    outline: none;
+}
+
+button{
+    width: fit-content;
+    margin-inline: auto;
+    padding: 5px 5px;
+    border-radius: 5px;
+    background: none;
+    border: 1px rgb(80, 37, 37);
+    border-style: groove;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover{
+    background-color: black;
+    color: white;
+}
+
+h1{
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+}
+
+.sub-head{
+    font-size: 1.2rem;
+    padding-bottom: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+
+#try-again, #attempts{
+    margin-top: 5px;
+}
+#attempts{
+    color: rgb(18, 128, 18);
+}
+#try-again{
+    color: red;
+}
+
+@media only screen and (max-width: 500px){
+    h1{
+        font-size: 2rem;
+    }
+}
