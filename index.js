@@ -6,27 +6,29 @@ let attempts = document.getElementById("attempts");
 
 let guessedNum ;
 let randomNum;
+let count = 0;
+
+generateRandom();
 function generateRandom(){
-    
+    count = 0;
     randomNum = Math.floor(Math.random()*10 +1);
     console.log(randomNum);
     
 }
 
-generateRandom();
+
+    numInput.addEventListener('input',(event)=>{
+        guessedNum = parseInt(event.target.value);
+        tryAgain.innerHTML = "";
+        attempts.innerHTML = "";
+   })
 
 
 
 
-numInput.addEventListener('input',(event)=>{
-     guessedNum = parseInt(event.target.value);
-     tryAgain.innerHTML = "";
-     attempts.innerHTML = "";
-})
-
-
-
+   
 button.addEventListener('click', ()=>{
+    
 
 
     if(guessedNum === randomNum){
@@ -45,8 +47,11 @@ button.addEventListener('click', ()=>{
         
     }
     else{
+
+        
+        count++;
         console.log("wrong guess");
-        tryAgain.innerHTML = "try again!";
+        tryAgain.innerHTML = `try again! Attempt:  ${count}`;
         
     }
 
